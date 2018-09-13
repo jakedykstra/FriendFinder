@@ -1,5 +1,7 @@
 // stored data of friends survey answers
-friends = [{
+var exports = module.exports = {};
+
+exports.friends = [{
         "name": "Ahmed",
         "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
         "scores": [
@@ -20,7 +22,7 @@ friends = [{
 
 
 
-    function friendMatch(friend){
+    exports.friendMatch = function(friend){
         const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
         for (i=0; i<friends.length; i++) {
@@ -50,7 +52,7 @@ friends = [{
         }
     }
 
-    function jsonForModal(closestMatch){
+    exports.jsonForModal = function(closestMatch){
     let similarFriend = {
         friendName: closestMatch.name,
         friendPicture: closestMatch.photo
@@ -58,22 +60,6 @@ friends = [{
     return similarFriend;
     }
 
-
-    // friendScore.map((val) => {
-            //     let reducer = {};
-            //     let name = Object.keys(val);
-            //     let overall = Object.values(val).reduce(reducer);
-            //     reducer[name] = overall;
-            // });
-
-    //     for (i=0; i<compareArr.length; i++) {
-    //         compareArr[i][scores]
-    //         for(j=0; j<compareArr[i][scores].length; i++){}
-    //     }
-
-    //     function compare(arr1,arr2){
-    //         const finalarray =[];
-    //       }
     
 // 6. Determine the user's most compatible friend using the following as a guide:
 
